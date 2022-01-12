@@ -22,9 +22,12 @@ Será común encontrarse con directorios nombrados de la siguiente forma:
 - ```c10-ECMASS6```
 
 Es importante recordar que cuando veamos <br>
-▶️ m01: quiere decir _módulo 01_  
-▶️ c10: quiere decir _clase 10_
+▶️ **m01**: quiere decir _módulo 01_  
+▶️ **c10**: quiere decir _clase 10_
 
+
+---
+<br>
 
 <br>
 
