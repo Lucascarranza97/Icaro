@@ -36,6 +36,7 @@ function pruebaFor(){
 pruebaFor();
 ```
 >La variable ```i``` no puede ser mostrada: JavaScript la marca como que no está definida porque, al haber sido creada con ```let```, sólo existe dentro del scope del ciclo ```for```.
+---
 
 <br>
 
@@ -107,3 +108,30 @@ desestructurar(objetoGigante); // Juan
 
 ```
 > ```fail-soft``` es el mecanismo por el cual, al no hallar una propiedad, JavaScript evita el colapso y devuelve ```undefined```.
+---
+<br>
+
+## Spread operator ```...```
+
+Dependiendo de cómo lo invoquemos, el **spread operator** hace una cosa, o la inversa:  
+1. Deshace un arreglo y separa sus elementos en datos particulares, o bien
+2. Une los elementos separados dentro de un arreglo.
+
+```javascript
+function unir(...y) {
+    console.log(y);
+}
+unir(3, 4, "hola");
+
+```
+>Cada nuevo elemento que se le pase por parámetro a la función ```unir``` **formará parte del arreglo** a ser mostrado por consola.
+
+<br>
+
+```javascript
+function desunir(x, y, z) {
+    console.log(x + y + z);
+}
+desunir(...[1, 2, 3]); // 6
+```
+>Cada elemento del arreglo pasado por parámetro, en la función ```desunir``` será extirpado de él y sumado dentro de la consola.
