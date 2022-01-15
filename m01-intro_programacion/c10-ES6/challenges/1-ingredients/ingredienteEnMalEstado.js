@@ -3,10 +3,22 @@ const menuDelDia = JSON.parse(fs.readFileSync('./ingredients.JSON', 'utf-8'));
 
 console.log(menuDelDia);
 
-const encontrarIngrediente = (menu, comida, ingrediente) => {
 
+function ingredienteEnMalEstado (menu, comida, ingrediente) {
+    let ingredientesEnMalEstado = [];
+
+    if (menu.hasOwnProperty(comida)) {
+        for (let i = 0; i < menu[comida].length; i++) {
+            if(menu[comida][i] === ingrediente) {
+                ingredientesEnMalEstado.push(menu[comida][i - 1], menu[comida][i], menu[comida][i + 1])
+            }
+        }
+        if (ingredientesEnMalEstado.length > 0) {
+            return ingredientesEnMalEstado;
+        } else {
+            return "El menú está perfecto"
+        }
+    } else {
+        return "Lo siento, no tenemos eso en el menú"
+    }
 }
-
-// encontrarIngrediente(menuDelDia, "raviolesConSalsa", "Aceite") ---> ["Huevos", "Aceite", "Peceto"]
-// encontrarIngrediente(menuDelDia, "tallarines", "Pollo")       ---> ["Harina", "Pollo", "Aceite"]
-// encontrarIngrediente(menuDelDia, "bagnaCauda", "Cebolla")    ---> "El menú está perfecto"
