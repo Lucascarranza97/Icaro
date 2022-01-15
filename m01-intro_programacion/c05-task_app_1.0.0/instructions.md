@@ -6,7 +6,9 @@
 La idea es que contenga en una variable/constante `tasks` (que exportaremos para consumir en otro archivo) todas las tareas en formato de un **arreglo de objetos literales**, donde cada tarea es un objeto literal y en su conjunto conforman el arreglo de tareas.  
 Cada tarea deberá tener **dos propiedades**: `title` (título) y `desc` (descripción), ambas de tipo _string_.
 
-![tasksData.js](/images/tasks_data.png)
+
+<img src="../../images/tasks_data.png" alt="tasks data" height="200" width="400" />
+    
 
 <br>
 
@@ -16,7 +18,9 @@ Cada tarea deberá tener **dos propiedades**: `title` (título) y `desc` (descri
 
 <br>
 
-<center> <img src="../../images/commands.png" alt="commands folder" height="150" width="150"  /> </center>
+
+<img src="../../images/commands.png" alt="commands folder" height="150" width="150" />
+
 
 <br>
 
@@ -74,4 +78,4 @@ Dentro de este deberemos crear el código necesario para que, al correr nuestra 
 
 <br>
 
-<center> <img src="../../images/tasks_find_correr.png" alt="commands folder" height="75" width="350" /> </center>
+<img src="../../images/tasks_find_correr.png" alt="node example" height="75" width="350" /> 
