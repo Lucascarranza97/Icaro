@@ -62,3 +62,100 @@ Algunas etiquetas de HTML, por su naturaleza, **no necesitan de una etiqueta de 
 
 <br>
 
+### Atributos
+
+En su mayoría, los atributos de un elemento son pares **clave-valor**, separados por un signo de igual `=` y escritos en la etiqueta **después del nombre del elemento**. El valor puede estar rodeado por comillas dobles o simples. Los atributos de los tags nos sirven para cambiar su comportamiento o configurarlos.
+
+```html
+<etiqueta atributo="valor" /> Contenido </etiqueta>
+```
+
+> 🔜  Veremos en detalle las etiquetas más comunes HTML en la próxima lección.
+
+---
+
+<br>
+<br>
+
+### **`CSS`: Cascading Style Sheets**
+
+CSS, Hojas de Estilo en Cascada (_Cascading Style Sheets_, por sus siglas en inglés) es un concepto que permite, como su nombre lo indica, añadir estilos a una página web. <br>
+Como hemos visto, las primeras páginas de internet eran, bueno... algo aburridas; de hecho, aún está viva la [primera página de internet](http://info.cern.ch/hypertext/WWW/TheProject.html).<br>
+Mediante reglas de estilo compuestas por un par `propiedad: valor;` que se aplican a un selector en particular, CSS nos permite añadir estilos visuales a nuestros sitios web.
+
+```css
+selector {
+  propiedad: valor;
+  propiedad: valor;
+}
+```
+
+Los **selectores** implican un abordaje bastante amplio, ya que los hay en calidad y cantidad. Por ahora, sólo diremos que un selector **es un elemento de nuestro archivo html** al cual se le aplicarán los estilos especificados en las reglas. Aunque, en realidad, más adelante veremos cuánto más complejo es referirnos a selectores.
+
+<img src="../../images/css-declaration.png" alt="css declaration" height="200" width="400"/>
+
+<br>
+
+### Formas de dar estilo
+Antes de empezar a dar estilos, necesitamos una forma de avisarle al navegador que vamos a hacerlo. Hay varias formas de lograr esto:
+
+- Dentro del mismo documento HTML al cual queremos dar estilos:
+    - utilizando el **atributo** `<style>` [dentro de nuestra etiqueta HTML](#item1).
+     - haciendo uso de la **etiqueta** `<style>`. Esta etiqueta, a su vez, debe ubicarse [dentro de la etiqueta `<head>`](#item2) para que tenga efecto.
+
+<br>
+
+- Por fuera del documento HTML que estructura nuestra web:
+    - Mediante un archivo externo, por convención denominado `styles.css`. Este archivo estará _enlazado_ a nuestro documento HTML por vía de [la etiqueta `<link>`](#item3).
+
+<br>
+
+<a id="item1"></a>
+
+```html
+<h1 style="color: red"></h1>
+```
+> Este es un ejemplo de un estilo en línea.
+---
+
+<br>
+
+<a id="item2"></a>
+
+```html
+  <html>
+
+    <head>
+
+      <style>
+        h1 {
+            color: red;
+        }
+      </style>
+
+    </head>
+
+    <body>
+        ...
+    </body>
+
+  </html>
+```
+> Otra de las maneras es colocar las reglas dentro de la etiqueta `<head>`.
+---
+<br>
+
+<a id="item3"></a>
+```html
+<html>
+
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+    </body>
+
+</html>
+```
+> Así es como le indicamos al navegador que vaya a buscar una hoja de estilos externa a nuestro Documento HTML. Los atributos de la etiqueta `<link>` son `rel` y `href`: el primero determina la relación que el archivo tiene con el documento (en este caso, _stylesheet_, u hoja de estilos, por su traducción), mientras que el segundo recibe como valor el nombre de nuestra hoja externa de estilos.
